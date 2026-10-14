@@ -9,12 +9,16 @@ const categories = [
   ['Emergency', /\b(emergency|evacuat\w*|civil defen[cs]e|flood\w*|warning)\b|طوارئ|إخلاء|الدفاع المدني|سيول|تحذير/i],
   ['Security', /\b(attack\w*|security incident|terror\w*)\b|هجوم|هجمات|إرهاب/i]
 ];
+// Editorial, retrospective, sport and overseas-aid items are not current incident reports.
+export function excluded(title, url) {
+  return /\b(anniversary|years? ago|on this day|retrospective|opinion|analysis|could|might|would|drill|exercise|time attack|relief flights?)\b|ذكرى|مناورات|تدريبات|تحليل/i.test(title)
+    || /\/(opinion|op-ed|columns?|columnists?)\//i.test(new URL(url).pathname);
+}
 export function normalize(raw, now = Date.now()) {
   const title = clean(raw.title), url = articleURL(raw.url);
   const category = categories.find(([, pattern]) => pattern.test(title))?.[0];
   if (!url || !title || !location.test(title) || !category) return null;
-  // Editorial/retrospective headlines are not current incident reports.
-  if (/\b(anniversary|years? ago|on this day|retrospective|opinion|analysis|could|might|would|drill|exercise)\b|ذكرى|مناورات|تدريبات|تحليل/i.test(title)) return null;
+  if (excluded(title, url)) return null;
   const stamp = Date.parse(raw.publishedAt || raw.discoveredAt);
   if (!Number.isFinite(stamp) || stamp > now + 5 * 60000 || now - stamp > 7 * 24 * 3600000) return null;
   const publishedAt = raw.publishedAt ? new Date(stamp).toISOString() : null;

@@ -11,5 +11,6 @@ export class Store {
   }
   async get(key) { const value = await this.command('GET', `saudisafe:${key}`); return value ? JSON.parse(value) : null; }
   set(key, value, ttl = 7 * 86400) { return this.command('SET', `saudisafe:${key}`, JSON.stringify(value), 'EX', ttl); }
+  release(key) { return this.command('DEL', `saudisafe:${key}`); }
   async claim(key, ttl = 30 * 86400) { return (await this.command('SET', `saudisafe:${key}`, 'true', 'NX', 'EX', ttl)) === 'OK'; }
 }

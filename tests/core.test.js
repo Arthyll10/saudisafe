@@ -106,3 +106,14 @@ test('monitor keeps saved reports across runs for seven days and expires older o
   const result=await monitor({store,now,collectFn:async()=>({...await collection(),reports:[]})});
   assert.deepEqual(result.reports.map(r=>r.id),['saved']);
 });
+test('run lock is released after a run and contention is reported as a skip',async()=>{
+  const store=new Memory();store.release=async k=>store.values.delete(k);
+  await monitor({store,collectFn:collection,now});assert.equal(store.values.has('run-lock'),false);
+  await store.claim('run-lock');await assert.rejects(monitor({store,collectFn:collection,now}),e=>e.locked===true);
+});
+test('sport, overseas aid and opinion items are excluded, including previously saved ones',async()=>{
+  for(const patch of [{title:'Saudi Toyota Championship Time Attack to be decided in Jeddah'},{title:'Saudi Relief Flight Lands in Nepal to Aid Flood Victims'},{url:'https://www.arabnews.com/opinion/saudi-arabia-attacks-3006284'}])assert.equal(normalize({...raw,...patch},now),null);
+  const store=new Memory();await store.set('snapshot',{reports:[{...report(),id:'old',title:'Saudi Toyota Championship Time Attack to be decided in Jeddah'}],sources:[]});
+  const result=await monitor({store,now,collectFn:async()=>({...await collection(),reports:[]})});
+  assert.deepEqual(result.reports.map(r=>r.id),[]);
+});

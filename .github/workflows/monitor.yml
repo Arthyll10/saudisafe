@@ -1,7 +1,8 @@
 name: Monitor news
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    # Off-peak minutes: GitHub drops many jobs scheduled at :00/:15/:30/:45.
+    - cron: '4,19,34,49 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
