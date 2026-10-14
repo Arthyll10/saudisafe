@@ -27,7 +27,7 @@ test('English and Arabic headlines require Saudi context and current dates',()=>
   assert.ok(normalize({...raw,title:'السعودية تعلن اعتراض صاروخ'},now));
   for(const patch of [{title:'Drone attack in another country'},{title:'Saudi Arabia football results'},{publishedAt:'2020-01-01'},{publishedAt:'invalid'},{publishedAt:'2026-10-12'},{title:'Saudi Arabia drone attack anniversary'}])assert.equal(normalize({...raw,...patch},now),null);
 });
-test('GDELT discovery time is never treated as publication or confirmation',()=>{
+test('reports without a publication time are never treated as published or alert-eligible',()=>{
   const r=normalize({...raw,publishedAt:null,discoveredAt:'2026-10-11T09:30:00Z'},now);
   assert.equal(r.publishedAt,null);assert.equal(r.status,'Unverified');assert.equal(eligible(r,now),false);
   assert.equal(eligible(report(),now),true);assert.equal(eligible(report(),now+3*3600000),false);
@@ -37,8 +37,8 @@ test('RSS parsing handles entity text and rejects DTD or malformed responses',()
   assert.throws(()=>parseFeed('<!DOCTYPE rss><rss/>'));assert.throws(()=>parseFeed('<html>bad'));
 });
 test('collector preserves partial success and reports source outages',async()=>{
-  const result=await collect({now,requestFn:async url=>{if(url.includes('api.gdelt'))return JSON.stringify({articles:[{title:raw.title,url:raw.url,seendate:'20261011T093000Z'}]});throw new Error('offline');}});
-  assert.equal(result.sources.filter(s=>s.ok).length,1);assert.equal(result.reports[0].status,'Unverified');
+  const result=await collect({now,requestFn:async url=>{if(url.includes('bbci.co.uk'))return `<rss><channel><item><title>${raw.title}</title><link>${raw.url}</link><pubDate>${raw.publishedAt}</pubDate></item></channel></rss>`;throw new Error('offline');}});
+  assert.equal(result.sources.filter(s=>s.ok).length,1);assert.equal(result.sources.length>1,true);assert.equal(result.reports[0].publisher,'BBC News');
 });
 test('Telegram message escapes external text and links',()=>{
   const text=message({...report(),title:'<script>alert("x")</script> & headline'});
@@ -87,10 +87,7 @@ test('public endpoint rejects writes without accessing storage',async()=>{
 test('seven-day collection includes older reports without making them alert-eligible',async()=>{
   const older = new Date(now - 3 * 86400000).toISOString();
   const result = await collect({now,requestFn:async url=>{
-    if(url.includes('api.gdelt')){
-      assert.equal(new URL(url).searchParams.get('timespan'),'7d');
-      return JSON.stringify({articles:[]});
-    }
+    if(!url.includes('bbci.co.uk')) return '<rss><channel></channel></rss>';
     return `<rss><channel><item><title>Saudi Arabia reports drone attack</title><link>https://bbc.com/news/articles/past-day-test</link><pubDate>${older}</pubDate></item></channel></rss>`;
   }});
   assert.equal(result.reports.length,1);

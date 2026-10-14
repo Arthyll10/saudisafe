@@ -1,5 +1,5 @@
 export const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-export async function request(url, { fetchFn = fetch, retries = 2, retryDelay = 500, ...options } = {}) {
+export async function request(url, { fetchFn = fetch, retries = 2, ...options } = {}) {
   for (let attempt = 0; ; attempt++) {
     try {
       const response = await fetchFn(url, { ...options, redirect: 'error', signal: AbortSignal.timeout(12000) });
@@ -14,7 +14,7 @@ export async function request(url, { fetchFn = fetch, retries = 2, retryDelay = 
       return Buffer.concat(chunks).toString('utf8');
     } catch (error) {
       if (attempt >= retries || error.retryable === false || error.message === 'Response too large') throw new Error('Upstream request failed');
-      await sleep(retryDelay * 2 ** attempt);
+      await sleep(500 * 2 ** attempt);
     }
   }
 }

@@ -61,7 +61,7 @@
             <option>Security</option>
           </select>
         </div>
-        <div class="field">
+        <div class="field" hidden>
           <label for="status">Status</label>
           <select id="status">
             <option value="">All statuses</option>
@@ -120,8 +120,6 @@
         <dl class="legend">
           <dt><span class="status-tag developing">Developing report</span></dt>
           <dd>Reported by a publisher with a known publication time. Not independently corroborated.</dd>
-          <dt><span class="status-tag unverified">Unverified</span></dt>
-          <dd>Found through discovery search with an unknown publication time. Never sent as an alert.</dd>
         </dl>
         <details>
           <summary>Why are there no “confirmed” or “official” labels?</summary>
@@ -136,7 +134,7 @@
     <div class="about-grid">
       <div>
         <h3>Collection</h3>
-        <p>An automated job reads eight publisher news feeds and a discovery search about every 15 minutes. Opening this page never starts a collection; it shows what was last saved.</p>
+        <p>An automated job reads eleven publisher news feeds about every 15 minutes. Opening this page never starts a collection; it shows what was last saved.</p>
       </div>
       <div>
         <h3>Filtering</h3>

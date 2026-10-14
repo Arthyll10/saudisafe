@@ -11,14 +11,14 @@ SaudiSafe is an independent news monitor. It collects security and emergency rep
 - **Latest reports:** headlines from the past seven days that mention a place in Saudi Arabia together with a security or emergency term. Each card shows the publisher, the publication time in Saudi time (AST, UTC+3), a category and a link to the source.
 - **Collection status:** when news was last collected and whether that is recent. If the last collection is more than 45 minutes old, the site says *Updates delayed*, because recent reporting may be missing.
 - **Source health:** whether each news source responded on the last check and how many matching reports it provided. A source responding does not mean its reports are verified.
-- **Filters:** search headlines or publishers, filter by category or status, choose a time window (7 days, 24 hours, 6 hours or 2 hours), and sort newest or oldest first.
+- **Filters:** search headlines or publishers, filter by category, choose a time window (7 days, 24 hours, 6 hours or 2 hours), and sort newest or oldest first.
 - **Light and dark themes.** The page reloads saved reports every five minutes while it is open.
 
 ## How it works
 
 1. **Collection.** About every 15 minutes, an automated job reads the news feeds listed below. Visiting the website never triggers a collection; the site only displays what the job last saved.
 2. **Filtering.** A headline is kept only if it names a Saudi location (such as Saudi Arabia, Riyadh, Jeddah, Dammam or Mecca, in English or Arabic) *and* a security or emergency term (such as missile, drone, explosion, fire, evacuation or attack). Opinion columns, analysis, anniversaries, drills and some known false matches (such as motorsport "time attack" events and overseas relief flights) are excluded. Reports must have been published within the past seven days.
-3. **Labelling.** Each report gets a category and an information status (below). Nothing is labelled confirmed or official automatically.
+3. **Labelling.** Each report gets a category and is labelled a *Developing Report* (below). Nothing is labelled confirmed or official automatically.
 4. **Storage and display.** Reports are saved for seven days and served to the website. If a source is down, earlier reports are kept and the outage is shown in Source health.
 5. **Telegram alerts.** New publisher reports published within the last two hours can be sent to the operator's Telegram channel. Each article and each identical headline is sent at most once.
 
@@ -31,12 +31,11 @@ SaudiSafe is an independent news monitor. It collects security and emergency rep
 | Emergency | Evacuations, civil defence, floods, warnings |
 | Security | Attacks, terrorism, security incidents |
 
-### Information status
+### Information label
 
-| Status | Meaning |
+| Label | Meaning |
 | --- | --- |
 | **Developing Report** | Reported by a publisher with a known publication time. Not independently corroborated. |
-| **Unverified** | Found through discovery search with an unknown publication time. Never sent as a Telegram alert. |
 
 *Confirmed* or *Official* labels would need authenticated safety announcements or strong corroboration, so SaudiSafe never assigns them automatically. The same story appearing at several outlets is not treated as confirmation, since outlets often share the same underlying reporting.
 
@@ -52,7 +51,9 @@ SaudiSafe is an independent news monitor. It collects security and emergency rep
 | Asharq Al-Awsat Gulf | Gulf | Arabic |
 | Al Bilad | Saudi local | Arabic |
 | Middle East Eye | Regional | English |
-| GDELT | Global discovery search | Multiple |
+| Saudi Gazette | Saudi local | English |
+| The Guardian (Saudi Arabia) | International | English |
+| The National | Gulf and regional | English |
 
 Article links are accepted only from each publisher's own website.
 
@@ -60,7 +61,7 @@ Article links are accepted only from each publisher's own website.
 
 - Matching is based on headline keywords, not on understanding the article. Relevant reports can be missed, and some commentary can still appear.
 - Exact incident locations are not shown. A city named in a headline does not prove where an event happened. No maps, tracking or military locations are produced.
-- Collection runs on a best-effort schedule and can be delayed. News feeds and the discovery search can fail or rate-limit, and feeds may not reach back a full seven days.
+- Collection runs on a best-effort schedule and can be delayed. News feeds can fail or rate-limit, and feeds may not reach back a full seven days.
 - Distinct headlines about the same event can appear as separate reports.
 
 ## Privacy and security

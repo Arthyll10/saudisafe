@@ -4,7 +4,8 @@ export const publishers = new Map([
   ['aljazeera.net', 'Al Jazeera Arabic'], ['arabnews.com', 'Arab News'],
   ['spa.gov.sa', 'Saudi Press Agency'],
   ['aawsat.com', 'Asharq Al-Awsat Arabic'], ['english.aawsat.com', 'Asharq Al-Awsat'],
-  ['albiladdaily.com', 'Al Bilad'], ['middleeasteye.net', 'Middle East Eye']
+  ['albiladdaily.com', 'Al Bilad'], ['middleeasteye.net', 'Middle East Eye'],
+  ['saudigazette.com.sa', 'Saudi Gazette'], ['theguardian.com', 'The Guardian'], ['thenationalnews.com', 'The National']
 ]);
 export const feeds = [
   { name: 'BBC Middle East', publisherHosts: ['bbc.com', 'bbc.co.uk'], url: 'https://feeds.bbci.co.uk/news/world/middle_east/rss.xml' },
@@ -14,7 +15,11 @@ export const feeds = [
   { name: 'Asharq Al-Awsat English', publisherHosts: ['english.aawsat.com'], url: 'https://english.aawsat.com/feed' },
   { name: 'Asharq Al-Awsat Gulf', publisherHosts: ['aawsat.com'], url: 'https://aawsat.com/feed/gulf' },
   { name: 'Al Bilad', publisherHosts: ['albiladdaily.com'], url: 'https://albiladdaily.com/feed/' },
-  { name: 'Middle East Eye', publisherHosts: ['middleeasteye.net'], url: 'https://www.middleeasteye.net/rss' }
+  { name: 'Middle East Eye', publisherHosts: ['middleeasteye.net'], url: 'https://www.middleeasteye.net/rss' },
+  // The www host redirects, and redirects are rejected, so the bare host is used.
+  { name: 'Saudi Gazette', publisherHosts: ['saudigazette.com.sa'], url: 'https://saudigazette.com.sa/rssFeed/74' },
+  { name: 'The Guardian', publisherHosts: ['theguardian.com'], url: 'https://www.theguardian.com/world/saudiarabia/rss' },
+  { name: 'The National', publisherHosts: ['thenationalnews.com'], url: 'https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml' }
 ];
 export function publisherFor(host) { return publishers.get(host.replace(/^www\./, '')); }
 export function articleURL(value) {

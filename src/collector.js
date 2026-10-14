@@ -10,16 +10,10 @@ export function parseFeed(xml) {
   return (Array.isArray(items) ? items : [items]).map(item => ({ title: item.title, url: item.link, publishedAt: item.pubDate }));
 }
 export async function collect({ now = Date.now(), requestFn = request, onProgress = () => {} } = {}) {
-  const gdelt = new URL('https://api.gdeltproject.org/api/v2/doc/doc');
-  gdelt.search = new URLSearchParams({ query: '("Saudi Arabia" OR "السعودية") (missile OR drone OR explosion OR emergency OR attack OR "صاروخ" OR "هجوم")', mode: 'artlist', format: 'json', timespan: '7d', maxrecords: '250', sort: 'datedesc' });
-  // GDELT allows one request per 5 seconds; quicker retries are always rejected with HTTP 429.
-  const jobs = [{ name: 'GDELT discovery', url: gdelt.href, options: { retries: 1, retryDelay: 6000 }, parse: text => {
-    const data = JSON.parse(text); if (!Array.isArray(data.articles)) throw new Error('Invalid discovery response');
-    return data.articles.map(a => ({ title: a.title, url: a.url, discoveredAt: typeof a.seendate === 'string' ? a.seendate.replace(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z$/, '$1-$2-$3T$4:$5:$6Z') : null }));
-  } }, ...feeds.map(feed => ({ ...feed, parse: text => parseFeed(text).filter(item => belongsToFeed(item.url, feed)) }))];
+  const jobs = feeds.map(feed => ({ ...feed, parse: text => parseFeed(text).filter(item => belongsToFeed(item.url, feed)) }));
   const outcomes = await Promise.all(jobs.map(async job => {
     try {
-      const reports = job.parse(await requestFn(job.url, job.options)).map(raw => normalize(raw, now)).filter(Boolean);
+      const reports = job.parse(await requestFn(job.url)).map(raw => normalize(raw, now)).filter(Boolean);
       onProgress(`${job.name}: ${reports.length} matching reports`);
       return { name: job.name, ok: true, checkedAt: new Date(now).toISOString(), matchingCount: reports.length, reports };
     }
