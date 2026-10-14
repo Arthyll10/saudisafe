@@ -1,0 +1,20 @@
+{
+  "name": "saudisafe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env scripts/dev.js",
+    "monitor": "node --env-file-if-exists=.env scripts/monitor.js",
+    "telegram:test": "node --env-file-if-exists=.env scripts/telegram-test.js",
+    "test": "node --test tests/*.test.js",
+    "build": "node scripts/build.js",
+    "sources:check": "node scripts/check-sources.js"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.3.0"
+  }
+}
