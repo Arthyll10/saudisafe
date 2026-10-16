@@ -1,0 +1,893 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T16:46:17+00:00",
+  "title": "Design System: SaudiSafe",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Bone Ground",
+        "canonical": "#f3f1ea",
+        "cssVar": "--ground",
+        "tonalRamp": [
+          "#0c0b07",
+          "#272520",
+          "#44423c",
+          "#63615b",
+          "#84827c",
+          "#a7a59e",
+          "#cbc9c2",
+          "#f0eee7"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#ffffff",
+        "cssVar": "--surface",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Worn Bone",
+        "canonical": "#e9e7de",
+        "cssVar": "--surface-2",
+        "tonalRamp": [
+          "#0d0b06",
+          "#27251e",
+          "#44423b",
+          "#63615a",
+          "#84827a",
+          "#a7a59d",
+          "#cbc9c0",
+          "#f1efe6"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Desk Ink",
+        "canonical": "#14201a",
+        "cssVar": "--ink",
+        "tonalRamp": [
+          "#040e09",
+          "#1c2822",
+          "#38463f",
+          "#57655e",
+          "#78867f",
+          "#9aa9a1",
+          "#becec5",
+          "#e3f3ea"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#4d5a52",
+        "cssVar": "--ink-2",
+        "tonalRamp": [
+          "#040e08",
+          "#1d2821",
+          "#39463e",
+          "#58655d",
+          "#78867e",
+          "#9ba9a0",
+          "#bfcdc4",
+          "#e4f3e9"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#dcdad0",
+        "cssVar": "--line",
+        "tonalRamp": [
+          "#0d0b05",
+          "#27251e",
+          "#44423a",
+          "#636159",
+          "#848279",
+          "#a7a59c",
+          "#cbc9bf",
+          "#f1efe5"
+        ]
+      },
+      "board": {
+        "role": "primary",
+        "displayName": "Saudi Board Green",
+        "canonical": "#0d3b2a",
+        "cssVar": "--board",
+        "tonalRamp": [
+          "#001205",
+          "#002e1d",
+          "#204c3a",
+          "#406c59",
+          "#618e79",
+          "#83b19c",
+          "#a7d6bf",
+          "#cbfce4"
+        ]
+      },
+      "board-2": {
+        "role": "primary",
+        "displayName": "Board Slot Green",
+        "canonical": "#14503a",
+        "cssVar": "--board-2",
+        "tonalRamp": [
+          "#001304",
+          "#002f1c",
+          "#114e38",
+          "#366e57",
+          "#579077",
+          "#7ab499",
+          "#9ed8bd",
+          "#c2fee2"
+        ]
+      },
+      "board-hover": {
+        "role": "primary",
+        "displayName": "Board Slot Hover",
+        "canonical": "#1a5c43",
+        "cssVar": "--board-hover",
+        "tonalRamp": [
+          "#001403",
+          "#00301a",
+          "#054f36",
+          "#306f55",
+          "#539176",
+          "#76b598",
+          "#99dabc",
+          "#beffe0"
+        ]
+      },
+      "board-ink": {
+        "role": "neutral",
+        "displayName": "Board Bone",
+        "canonical": "#f3f1ea",
+        "cssVar": "--board-ink",
+        "tonalRamp": [
+          "#0c0b07",
+          "#272520",
+          "#44423c",
+          "#63615b",
+          "#84827c",
+          "#a7a59e",
+          "#cbc9c2",
+          "#f0eee7"
+        ]
+      },
+      "board-ink-2": {
+        "role": "neutral",
+        "displayName": "Board Sage",
+        "canonical": "#b9cfc2",
+        "cssVar": "--board-ink-2",
+        "tonalRamp": [
+          "#010f07",
+          "#182a20",
+          "#34473c",
+          "#53675b",
+          "#74887c",
+          "#96ab9f",
+          "#b9cfc2",
+          "#def5e8"
+        ]
+      },
+      "lamp": {
+        "role": "secondary",
+        "displayName": "Lamp Amber",
+        "canonical": "#f2c46b",
+        "cssVar": "--lamp",
+        "tonalRamp": [
+          "#210000",
+          "#401900",
+          "#603800",
+          "#825900",
+          "#a57a14",
+          "#ca9d43",
+          "#f0c269",
+          "#ffe78e"
+        ]
+      },
+      "lamp-ink": {
+        "role": "secondary",
+        "displayName": "Lamp Ink",
+        "canonical": "#1b1607",
+        "cssVar": "--lamp-ink",
+        "tonalRamp": [
+          "#0f0b01",
+          "#2a2515",
+          "#474231",
+          "#67614f",
+          "#888270",
+          "#aba592",
+          "#d0c9b5",
+          "#f5eeda"
+        ]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "Desk Green",
+        "canonical": "#0b6e3d",
+        "cssVar": "--brand",
+        "tonalRamp": [
+          "#001600",
+          "#003305",
+          "#005223",
+          "#167442",
+          "#419662",
+          "#66ba84",
+          "#8adfa7",
+          "#afffcc"
+        ]
+      },
+      "ok": {
+        "role": "semantic",
+        "displayName": "Ok",
+        "canonical": "#156b40",
+        "cssVar": "--ok",
+        "tonalRamp": [
+          "#001500",
+          "#00320b",
+          "#005128",
+          "#207247",
+          "#479567",
+          "#6bb989",
+          "#8fdeac",
+          "#b4ffd1"
+        ]
+      },
+      "ok-bg": {
+        "role": "semantic",
+        "displayName": "Ok Tint",
+        "canonical": "#e0efe5",
+        "cssVar": "--ok-bg",
+        "tonalRamp": [
+          "#050e08",
+          "#1d2821",
+          "#39453e",
+          "#58655c",
+          "#79867d",
+          "#9ba9a0",
+          "#bfcdc4",
+          "#e4f3e9"
+        ]
+      },
+      "warn": {
+        "role": "semantic",
+        "displayName": "Warn",
+        "canonical": "#8a5300",
+        "cssVar": "--warn",
+        "tonalRamp": [
+          "#250000",
+          "#451300",
+          "#673300",
+          "#8a5300",
+          "#ae7431",
+          "#d39756",
+          "#f9bb7a",
+          "#ffe19e"
+        ]
+      },
+      "warn-bg": {
+        "role": "semantic",
+        "displayName": "Warn Tint",
+        "canonical": "#f8ebd2",
+        "cssVar": "--warn-bg",
+        "tonalRamp": [
+          "#120900",
+          "#2d2410",
+          "#4b412c",
+          "#6b604a",
+          "#8d816a",
+          "#b0a48c",
+          "#d4c8af",
+          "#faedd4"
+        ]
+      },
+      "bad": {
+        "role": "semantic",
+        "displayName": "Bad",
+        "canonical": "#ad2a1f",
+        "cssVar": "--bad",
+        "tonalRamp": [
+          "#2d0000",
+          "#5f0000",
+          "#860000",
+          "#ad2a1f",
+          "#d55142",
+          "#fd7564",
+          "#ff9a87",
+          "#ffd0c0"
+        ]
+      },
+      "bad-bg": {
+        "role": "semantic",
+        "displayName": "Bad Tint",
+        "canonical": "#f9e2de",
+        "cssVar": "--bad-bg",
+        "tonalRamp": [
+          "#150705",
+          "#31201e",
+          "#4f3d3a",
+          "#6f5c59",
+          "#917d79",
+          "#b59f9c",
+          "#dac3bf",
+          "#ffe8e4"
+        ]
+      },
+      "board-ok": {
+        "role": "semantic",
+        "displayName": "Board Ok",
+        "canonical": "#8fe0b0",
+        "cssVar": "--board-ok",
+        "tonalRamp": [
+          "#001500",
+          "#00320d",
+          "#00522a",
+          "#1c7349",
+          "#449569",
+          "#69b98b",
+          "#8ddeae",
+          "#b2ffd3"
+        ]
+      },
+      "board-warn": {
+        "role": "semantic",
+        "displayName": "Board Warn",
+        "canonical": "#f2c46b",
+        "cssVar": "--board-warn",
+        "tonalRamp": [
+          "#210000",
+          "#401900",
+          "#603800",
+          "#825900",
+          "#a57a14",
+          "#ca9d43",
+          "#f0c269",
+          "#ffe78e"
+        ],
+        "note": "Same value as lamp; used for the board status line in delayed or partial-coverage states."
+      },
+      "board-bad": {
+        "role": "semantic",
+        "displayName": "Board Bad",
+        "canonical": "#ffab9f",
+        "cssVar": "--board-bad",
+        "tonalRamp": [
+          "#290000",
+          "#4b0504",
+          "#6e2821",
+          "#92483f",
+          "#b76a5f",
+          "#dd8c81",
+          "#ffb0a4",
+          "#ffd5c8"
+        ]
+      },
+      "ground-dark": {
+        "role": "neutral",
+        "displayName": "Bone Ground (dark)",
+        "canonical": "#0e1411",
+        "cssVar": "--ground",
+        "tonalRamp": [
+          "#070d0a",
+          "#202724",
+          "#3d4440",
+          "#5c635f",
+          "#7d8480",
+          "#9fa7a3",
+          "#c3cbc7",
+          "#e8f1ec"
+        ],
+        "theme": "dark"
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Paper White (dark)",
+        "canonical": "#161e1a",
+        "cssVar": "--surface",
+        "tonalRamp": [
+          "#060d09",
+          "#1f2723",
+          "#3c4440",
+          "#5a645f",
+          "#7b8580",
+          "#9ea8a2",
+          "#c1ccc6",
+          "#e7f2ec"
+        ],
+        "theme": "dark"
+      },
+      "surface-2-dark": {
+        "role": "neutral",
+        "displayName": "Worn Bone (dark)",
+        "canonical": "#1f2a24",
+        "cssVar": "--surface-2",
+        "tonalRamp": [
+          "#050e09",
+          "#1d2822",
+          "#39453f",
+          "#58655e",
+          "#79867f",
+          "#9ba9a1",
+          "#bfcdc5",
+          "#e4f3ea"
+        ],
+        "theme": "dark"
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Desk Ink (dark)",
+        "canonical": "#e7ece8",
+        "cssVar": "--ink",
+        "tonalRamp": [
+          "#090c0a",
+          "#222623",
+          "#3f4340",
+          "#5e625f",
+          "#7f8480",
+          "#a2a6a3",
+          "#c6cbc7",
+          "#ebf0ec"
+        ],
+        "theme": "dark"
+      },
+      "ink-2-dark": {
+        "role": "neutral",
+        "displayName": "Muted Ink (dark)",
+        "canonical": "#a5b2aa",
+        "cssVar": "--ink-2",
+        "tonalRamp": [
+          "#050e08",
+          "#1e2822",
+          "#3a453e",
+          "#59655d",
+          "#7a867e",
+          "#9ca9a1",
+          "#c0cdc5",
+          "#e5f2ea"
+        ],
+        "theme": "dark"
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Hairline (dark)",
+        "canonical": "#2a3530",
+        "cssVar": "--line",
+        "tonalRamp": [
+          "#050d09",
+          "#1d2823",
+          "#3a4540",
+          "#58655f",
+          "#798680",
+          "#9ba9a2",
+          "#bfcdc6",
+          "#e4f2ec"
+        ],
+        "theme": "dark"
+      },
+      "board-dark": {
+        "role": "primary",
+        "displayName": "Saudi Board Green (dark)",
+        "canonical": "#0a2e21",
+        "cssVar": "--board",
+        "tonalRamp": [
+          "#001106",
+          "#082c1f",
+          "#284a3c",
+          "#476a5b",
+          "#678c7b",
+          "#8aaf9e",
+          "#add4c2",
+          "#d2f9e7"
+        ],
+        "theme": "dark"
+      },
+      "board-2-dark": {
+        "role": "primary",
+        "displayName": "Board Slot Green (dark)",
+        "canonical": "#11432f",
+        "cssVar": "--board-2",
+        "tonalRamp": [
+          "#001204",
+          "#002e1c",
+          "#1c4c38",
+          "#3d6d57",
+          "#5e8f77",
+          "#80b299",
+          "#a4d7bd",
+          "#c9fde2"
+        ],
+        "theme": "dark"
+      },
+      "board-hover-dark": {
+        "role": "primary",
+        "displayName": "Board Slot Hover (dark)",
+        "canonical": "#165339",
+        "cssVar": "--board-hover",
+        "tonalRamp": [
+          "#001302",
+          "#003018",
+          "#0f4e34",
+          "#356f53",
+          "#579173",
+          "#79b496",
+          "#9dd9b9",
+          "#c2ffde"
+        ],
+        "theme": "dark"
+      },
+      "brand-dark": {
+        "role": "primary",
+        "displayName": "Desk Green (dark)",
+        "canonical": "#4cc489",
+        "cssVar": "--brand",
+        "tonalRamp": [
+          "#001600",
+          "#003604",
+          "#005623",
+          "#007742",
+          "#0a9b62",
+          "#46bf84",
+          "#6fe4a7",
+          "#a5ffd1"
+        ],
+        "theme": "dark"
+      },
+      "brand-ink-dark": {
+        "role": "primary",
+        "displayName": "Desk Green Ink (dark)",
+        "canonical": "#06130b",
+        "cssVar": "--brand-ink-dark",
+        "tonalRamp": [
+          "#030e07",
+          "#1b2920",
+          "#37463c",
+          "#56665b",
+          "#76877c",
+          "#99aa9f",
+          "#bccec2",
+          "#e1f4e8"
+        ]
+      },
+      "ok-dark": {
+        "role": "semantic",
+        "displayName": "Ok (dark)",
+        "canonical": "#6fd39f",
+        "cssVar": "--ok",
+        "tonalRamp": [
+          "#001600",
+          "#00340b",
+          "#005429",
+          "#007547",
+          "#2e9867",
+          "#57bc89",
+          "#7de1ad",
+          "#a4ffd2"
+        ],
+        "theme": "dark"
+      },
+      "ok-bg-dark": {
+        "role": "semantic",
+        "displayName": "Ok Tint (dark)",
+        "canonical": "#16301f",
+        "cssVar": "--ok-bg",
+        "tonalRamp": [
+          "#001003",
+          "#112b1b",
+          "#2f4937",
+          "#4d6955",
+          "#6e8b76",
+          "#90ae98",
+          "#b3d2bc",
+          "#d8f8e1"
+        ],
+        "theme": "dark"
+      },
+      "warn-dark": {
+        "role": "semantic",
+        "displayName": "Warn (dark)",
+        "canonical": "#f0b75c",
+        "cssVar": "--warn",
+        "tonalRamp": [
+          "#230000",
+          "#451400",
+          "#663400",
+          "#885500",
+          "#ac7602",
+          "#d19a3c",
+          "#f7be63",
+          "#ffe48f"
+        ],
+        "theme": "dark"
+      },
+      "warn-bg-dark": {
+        "role": "semantic",
+        "displayName": "Warn Tint (dark)",
+        "canonical": "#33260f",
+        "cssVar": "--warn-bg",
+        "tonalRamp": [
+          "#140800",
+          "#30230c",
+          "#4e4028",
+          "#6e5f47",
+          "#908067",
+          "#b3a388",
+          "#d7c7ac",
+          "#fdecd0"
+        ],
+        "theme": "dark"
+      },
+      "bad-dark": {
+        "role": "semantic",
+        "displayName": "Bad (dark)",
+        "canonical": "#ff9486",
+        "cssVar": "--bad",
+        "tonalRamp": [
+          "#2d0000",
+          "#540000",
+          "#791914",
+          "#9e3d34",
+          "#c56054",
+          "#ec8375",
+          "#ffa798",
+          "#ffd0c1"
+        ],
+        "theme": "dark"
+      },
+      "bad-bg-dark": {
+        "role": "semantic",
+        "displayName": "Bad Tint (dark)",
+        "canonical": "#3a1713",
+        "cssVar": "--bad-bg",
+        "tonalRamp": [
+          "#1e0101",
+          "#3c1915",
+          "#5d3631",
+          "#7e554f",
+          "#a2766f",
+          "#c69891",
+          "#ecbcb5",
+          "#ffe1d9"
+        ],
+        "theme": "dark"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Board \"Last collection\" clock; 44px below sm. Once per page."
+      },
+      "count": {
+        "displayName": "Count",
+        "purpose": "Slot report counts; 28px below sm."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles; 24px for How it works, 18px for panel titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Report headlines; 17px below sm; dir=auto for Arabic."
+      },
+      "row-time": {
+        "displayName": "Row Time",
+        "purpose": "HH:MM leading each row; 18px below sm."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Controls, notices, explanatory copy."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Meta lines, board sublines, panel copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Day headers only; uppercase."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Pills, source-health detail, page footnote."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Row entrance and lamp fade."
+      },
+      {
+        "name": "row-rise",
+        "value": "260ms ease-out-expo; from opacity 0, translateY(6px)",
+        "purpose": "Report rows entering the feed."
+      },
+      {
+        "name": "lamp-on",
+        "value": "320ms ease-out-expo; from board-2 background",
+        "purpose": "A slot lighting amber when selected."
+      },
+      {
+        "name": "color-transition",
+        "value": "150-200ms",
+        "purpose": "Hover fills and borders."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animations off, transitions 1ms, smooth scroll off",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "focus": {
+      "value": "2px solid var(--brand); outline-offset 2px; radius 4px",
+      "board": "outline colour switches to var(--lamp) on slots"
+    },
+    "theming": {
+      "mechanism": "data-theme=\"dark\" on :root, falling back to prefers-color-scheme before a saved preference applies",
+      "unchangedInDark": [
+        "board-ink",
+        "board-ink-2",
+        "lamp",
+        "lamp-ink",
+        "board-ok",
+        "board-warn",
+        "board-bad"
+      ]
+    },
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ],
+    "layout": {
+      "container": "1200px",
+      "gutter": "16px, 24px from sm",
+      "aside": "340px from lg",
+      "rowTimeColumn": "64px, 52px below sm"
+    }
+  },
+  "components": [
+    {
+      "name": "Reload Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one solid action on the desk: reload the saved snapshot.",
+      "html": "<button type=\"button\" class=\"ds-btn-primary\"><svg class=\"ds-ico\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"/><path d=\"M21 3v5h-5\"/><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"/><path d=\"M8 16H3v5\"/></svg><span>Reload</span></button>",
+      "css": ".ds-btn-primary { font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, \"Noto Sans\", \"Noto Sans Arabic\", \"Helvetica Neue\", Arial, sans-serif; display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 16px; border: 0; border-radius: 6px; background: var(--brand, #0b6e3d); color: #fff; font-size: 15px; font-weight: 600; cursor: pointer; transition: opacity 150ms, transform 150ms; } .ds-btn-primary:hover { opacity: .9; } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--brand, #0b6e3d); outline-offset: 2px; } .ds-btn-primary:disabled { opacity: .6; cursor: progress; } [data-theme=\"dark\"] .ds-btn-primary { color: #06130b; } .ds-ico { width: 16px; height: 16px; flex: none; }"
+    },
+    {
+      "name": "Show More Bar",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Full-width quiet bar that extends the feed by 30 rows.",
+      "html": "<button type=\"button\" class=\"ds-btn-more\">Show 30 more <span>· 99 not shown</span></button>",
+      "css": ".ds-btn-more { font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, \"Noto Sans\", \"Noto Sans Arabic\", \"Helvetica Neue\", Arial, sans-serif; width: 100%; height: 44px; border: 0; border-radius: 6px; background: var(--surface-2, #e9e7de); color: var(--ink, #14201a); font-size: 15px; font-weight: 600; cursor: pointer; transition: background-color 150ms; } .ds-btn-more span { font-weight: 400; color: var(--ink-2, #4d5a52); } .ds-btn-more:hover { background: var(--line, #dcdad0); } .ds-btn-more:focus-visible { outline: 2px solid var(--brand, #0b6e3d); outline-offset: 2px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Hairline-bordered search with an inline icon; selects share the same control style.",
+      "html": "<label class=\"ds-search\"><svg class=\"ds-search-ico\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><input type=\"search\" placeholder=\"Search headlines or publishers\" aria-label=\"Search headlines or publishers\"></label>",
+      "css": ".ds-search { position: relative; display: block; max-width: 420px; } .ds-search-ico { position: absolute; left: 12px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); color: var(--ink-2, #4d5a52); pointer-events: none; } .ds-search input { font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, \"Noto Sans\", \"Noto Sans Arabic\", \"Helvetica Neue\", Arial, sans-serif; width: 100%; box-sizing: border-box; height: 40px; padding: 0 12px 0 36px; border: 1px solid var(--line, #dcdad0); border-radius: 6px; background: var(--surface, #fff); color: var(--ink, #14201a); font-size: 15px; caret-color: var(--brand, #0b6e3d); transition: border-color 150ms; } .ds-search input::placeholder { color: var(--ink-2, #4d5a52); } .ds-search input:hover { border-color: var(--ink-2, #4d5a52); } .ds-search input:focus-visible { outline: 2px solid var(--brand, #0b6e3d); outline-offset: 2px; }"
+    },
+    {
+      "name": "Time-window Board",
+      "kind": "custom",
+      "refersTo": "slot",
+      "description": "Signature: the green board with one lit amber slot; the slots are the time-window filter.",
+      "html": "<div class=\"ds-board\" role=\"group\" aria-label=\"Time window\"><button type=\"button\" class=\"ds-slot\" aria-pressed=\"false\"><span class=\"ds-slot-l\">Past 2 hours</span><span class=\"ds-slot-n\">4</span></button><button type=\"button\" class=\"ds-slot\" aria-pressed=\"false\"><span class=\"ds-slot-l\">Past 6 hours</span><span class=\"ds-slot-n\">8</span></button><button type=\"button\" class=\"ds-slot\" aria-pressed=\"false\"><span class=\"ds-slot-l\">Past 24 hours</span><span class=\"ds-slot-n\">26</span></button><button type=\"button\" class=\"ds-slot is-on\" aria-pressed=\"true\"><span class=\"ds-slot-l\">Past 7 days</span><span class=\"ds-slot-n\">129</span></button></div>",
+      "css": ".ds-board { font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, \"Noto Sans\", \"Noto Sans Arabic\", \"Helvetica Neue\", Arial, sans-serif; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 8px; padding: 24px; background: var(--board, #0d3b2a); } .ds-slot { font: inherit; text-align: left; padding: 16px; border: 0; border-radius: 6px; background: var(--board-2, #14503a); color: var(--board-ink, #f3f1ea); cursor: pointer; transition: background-color 200ms, color 200ms; } .ds-slot:hover { background: var(--board-hover, #1a5c43); } .ds-slot:focus-visible { outline: 2px solid var(--lamp, #f2c46b); outline-offset: 2px; } .ds-slot-l { display: block; font-size: 14px; color: var(--board-ink-2, #b9cfc2); } .ds-slot:hover .ds-slot-l { color: var(--board-ink, #f3f1ea); } .ds-slot-n { display: block; margin-top: 2px; font-size: 44px; font-weight: 700; line-height: 1.25; font-variant-numeric: tabular-nums; } .ds-slot.is-on { background: var(--lamp, #f2c46b); color: var(--lamp-ink, #1b1607); } .ds-slot.is-on .ds-slot-l { color: inherit; font-weight: 600; }"
+    },
+    {
+      "name": "Day Header and Report Row",
+      "kind": "custom",
+      "refersTo": "title",
+      "description": "Uppercase day header with a 2px ink rule, then rows on the ground: fixed time column, headline, one-line meta.",
+      "html": "<section class=\"ds-day\"><h3 class=\"ds-day-h\">Today · Friday 16 October<span>21 reports</span></h3><article class=\"ds-row\"><time class=\"ds-row-t\">18:50</time><div class=\"ds-row-b\"><h4 class=\"ds-row-h\"><a href=\"#\">Saudi Arabia welcomes Security Council statement<svg class=\"ds-row-ico\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a></h4><p class=\"ds-row-m\"><span class=\"ds-pub\">Asharq Al-Awsat</span><span aria-hidden=\"true\">·</span><span class=\"ds-cat\">Security</span><span aria-hidden=\"true\">·</span><span class=\"ds-cat\">Developing</span></p></div></article><article class=\"ds-row\"><time class=\"ds-row-t\">18:05</time><div class=\"ds-row-b\"><h4 class=\"ds-row-h\">Report without a safe link</h4><p class=\"ds-row-m\"><span class=\"ds-pub\">Middle East Eye</span><span aria-hidden=\"true\">·</span><span class=\"ds-cat\">Missile &amp; drone</span><span class=\"ds-pill\">Unverified</span></p></div></article></section>",
+      "css": ".ds-day { font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, \"Noto Sans\", \"Noto Sans Arabic\", \"Helvetica Neue\", Arial, sans-serif; background: var(--ground, #f3f1ea); color: var(--ink, #14201a); padding: 0 16px; } .ds-day-h { display: flex; align-items: baseline; justify-content: space-between; margin: 0; padding: 20px 0 8px; border-bottom: 2px solid var(--ink, #14201a); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .025em; } .ds-day-h span { font-weight: 500; color: var(--ink-2, #4d5a52); } .ds-row { display: grid; grid-template-columns: 64px minmax(0,1fr); column-gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line, #dcdad0); } .ds-row:last-child { border-bottom: 0; } .ds-row-t { padding-top: 2px; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; } .ds-row-b { min-width: 0; } .ds-row-h { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.375; text-wrap: pretty; } .ds-row-h a { color: inherit; text-decoration: none; text-decoration-color: var(--brand, #0b6e3d); text-underline-offset: 3px; } .ds-row-h a:hover { color: var(--brand, #0b6e3d); text-decoration-line: underline; } .ds-row-h a:focus-visible { outline: 2px solid var(--brand, #0b6e3d); outline-offset: 2px; border-radius: 4px; } .ds-row-ico { display: inline; width: 16px; height: 16px; margin-left: 4px; vertical-align: -2px; color: var(--ink-2, #4d5a52); } .ds-row-m { display: flex; align-items: center; gap: 0 8px; min-width: 0; margin: 6px 0 0; white-space: nowrap; font-size: 14px; color: var(--ink-2, #4d5a52); } .ds-pub { min-width: 0; overflow: hidden; text-overflow: ellipsis; font-weight: 600; color: var(--ink, #14201a); } .ds-cat { flex: none; } .ds-pill { flex: none; padding: 1px 8px; border-radius: 9999px; background: var(--surface-2, #e9e7de); color: var(--ink, #14201a); font-size: 13px; font-weight: 600; }"
+    },
+    {
+      "name": "Source Health Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "One of only two surface panels; hairline-divided rows, each with an icon-and-word status.",
+      "html": "<section class=\"ds-panel\"><h2>Source health</h2><p class=\"ds-panel-s\">Result of the most recent check. A responding source does not verify its reports.</p><ul><li><span class=\"ds-src\">BBC Middle East</span><span class=\"ds-ok\"><svg class=\"ds-ok-ico\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg>Responding</span><span class=\"ds-det\">3 matching · checked 11 min ago</span></li><li><span class=\"ds-src\">Al Jazeera English</span><span class=\"ds-ok\"><svg class=\"ds-ok-ico\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg>Responding</span><span class=\"ds-det\">0 matching · checked 11 min ago</span></li></ul></section>",
+      "css": ".ds-panel { font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, \"Noto Sans\", \"Noto Sans Arabic\", \"Helvetica Neue\", Arial, sans-serif; max-width: 340px; padding: 20px; border-radius: 8px; background: var(--surface, #fff); color: var(--ink, #14201a); } .ds-panel h2 { margin: 0; font-size: 18px; font-weight: 700; } .ds-panel-s { margin: 4px 0 0; font-size: 14px; color: var(--ink-2, #4d5a52); } .ds-panel ul { list-style: none; margin: 12px 0 0; padding: 0; } .ds-panel li { display: grid; grid-template-columns: minmax(0,1fr) auto; column-gap: 12px; padding: 10px 0; border-top: 1px solid var(--line, #dcdad0); font-size: 14px; } .ds-src { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; } .ds-ok { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--ok, #156b40); } .ds-ok-ico { width: 14px; height: 14px; stroke-width: 2.4; } .ds-det { grid-column: span 2; font-size: 13px; color: var(--ink-2, #4d5a52); }"
+    },
+    {
+      "name": "Unverified Pill",
+      "kind": "chip",
+      "refersTo": "pill-unverified",
+      "description": "Neutral pill on the meta line; never a status colour.",
+      "html": "<span class=\"ds-chip\">Unverified</span>",
+      "css": ".ds-chip { font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, \"Noto Sans\", \"Noto Sans Arabic\", \"Helvetica Neue\", Arial, sans-serif; display: inline-block; padding: 1px 8px; border-radius: 9999px; background: var(--surface-2, #e9e7de); color: var(--ink, #14201a); font-size: 13px; font-weight: 600; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky white header: logo and wordmark left, muted links and the theme toggle right.",
+      "html": "<header class=\"ds-nav\"><a href=\"#\" class=\"ds-word\">Saudi<span>Safe</span></a><nav><a href=\"#\">Reports</a><a href=\"#\">Sources</a><a href=\"#\">How it works</a><button type=\"button\" aria-label=\"Switch to dark mode\"><svg class=\"ds-nav-ico\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg></button></nav></header>",
+      "css": ".ds-nav { font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, \"Noto Sans\", \"Noto Sans Arabic\", \"Helvetica Neue\", Arial, sans-serif; display: flex; align-items: center; justify-content: space-between; height: 56px; padding: 0 24px; border-bottom: 1px solid var(--line, #dcdad0); background: var(--surface, #fff); } .ds-word { font-size: 19px; font-weight: 700; letter-spacing: -.025em; color: var(--ink, #14201a); text-decoration: none; } .ds-word span { color: var(--brand, #0b6e3d); } .ds-nav nav { display: flex; align-items: center; gap: 4px; } .ds-nav nav a { padding: 8px 12px; border-radius: 6px; font-size: 15px; font-weight: 500; color: var(--ink-2, #4d5a52); text-decoration: none; transition: background-color 150ms, color 150ms; } .ds-nav nav a:hover { background: var(--surface-2, #e9e7de); color: var(--ink, #14201a); } .ds-nav nav a:focus-visible, .ds-nav button:focus-visible { outline: 2px solid var(--brand, #0b6e3d); outline-offset: 2px; } .ds-nav button { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; margin-left: 4px; border: 1px solid var(--line, #dcdad0); border-radius: 6px; background: transparent; color: var(--ink, #14201a); cursor: pointer; transition: background-color 150ms; } .ds-nav button:hover { background: var(--surface-2, #e9e7de); } .ds-nav-ico { width: 18px; height: 18px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Freshness Board",
+    "overview": "**Creative North Star: \"The Freshness Board\"**\n\nSaudiSafe reads like a station time board set above a plain news desk. A deep Saudi-green band owns the top of the page and answers one question before any headline: how recent is this? Its slots are the time-window filter, and the current one is lit amber, the way the active slot glows on a departure board. Below it, the desk is bone paper: headlines in day-grouped rows, each led by a large tabular time, with the publisher always visible.\n\nThe system is flat, calm and dense. Rank comes from weight, case and tabular digits on a tight scale, not from colour, shadow or decoration. Everything is built for an anxious visitor on a phone who has to scan in seconds, so status never relies on colour alone, and nothing is labelled twice.\n\nLight and dark themes share one structure. Dark mode deepens the ground and the green; the board text and the amber lamp stay the same.",
+    "keyCharacteristics": [
+      "A full-bleed green board band (and a matching green footer) bracketing a bone-paper desk.",
+      "One lit amber slot; amber otherwise means only \"stale or partial\".",
+      "Large tabular digits for the collection clock, slot counts and row times.",
+      "Flat fields: no shadows, no gradients, depth from tone and 1-2px rules.",
+      "Rows sit directly on the ground; panels are rare."
+    ],
+    "rules": [
+      {
+        "name": "The One Lamp Rule",
+        "body": "Amber is used in only two places: the lit time-window slot, and the stale or partial-coverage state (the board status line and the warn notice). One slot is lit at a time. Amber never decorates, never marks a category and never highlights a headline.",
+        "section": "colors"
+      },
+      {
+        "name": "The Green Field Rule",
+        "body": "The board green is a flat field that owns its band from edge to edge. Never use it as a card tint, a gradient or a chip colour on the desk.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never-Colour-Alone Rule",
+        "body": "Every status colour comes with an icon and a word (\"Responding\", \"Updates delayed\", \"Partial coverage\").",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Every number that a visitor compares (clock, counts, row times) uses tabular figures, so columns stay still when values change.",
+        "section": "typography"
+      },
+      {
+        "name": "The Weight-and-Case Rule",
+        "body": "Hierarchy comes from weight (400/600/700), size steps on a tight scale, and the single uppercase role. No new colours or typefaces are added for emphasis.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Field Rule",
+        "body": "Every surface is flat at rest and in every state. Hover changes a fill or a border colour, never elevation.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep amber to the lit slot and the stale or partial-coverage state (The One Lamp Rule).",
+      "Do lead every number a visitor compares with tabular figures.",
+      "Do set report rows directly on the bone ground, divided by 1px hairlines. Keep Paper White panels for side reference content.",
+      "Do keep the row grid fixed: the time column (64px / 52px) never moves for state.",
+      "Do pair every status colour with an icon and a word.",
+      "Do keep the meta line on one line. Truncate the publisher before the category.",
+      "Do honour reduced motion. Row rise, lamp fade and spinners switch off."
+    ],
+    "donts": [
+      "Don't add shadows or gradients to any surface (The Flat Field Rule).",
+      "Don't tint desk cards or chips with the board green. It stays a full-bleed field.",
+      "Don't add colour or a second typeface for emphasis. Rank by weight, size and case.",
+      "Don't label anything twice: the slots are the filter, so they get no separate \"Filter\" caption, and a count is not repeated beside its own heading.",
+      "Don't use colours or wording that suggest official status, confirmation or safety."
+    ]
+  }
+}

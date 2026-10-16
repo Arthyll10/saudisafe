@@ -66,17 +66,18 @@ Article links are accepted only from each publisher's own website.
 
 ## Privacy and security
 
-The website has no accounts, no tracking and no third-party scripts. It loads only its own files and reads a stored snapshot of reports. There is no public way to add sources or trigger collection. Article pages are never fetched; only the fixed news feeds are read.
+The website has no accounts, no tracking and no third-party scripts or fonts. It loads only its own files and reads a stored snapshot of reports. There is no public way to add sources or trigger collection. Article pages are never fetched; only the fixed news feeds are read.
 
 ## Running your own copy
 
-Requires Node.js 22.
+Requires Node.js 22. The website is built with React, Tailwind CSS and Vite from `web/`; `npm run build` writes the static site to `dist/`.
 
 ```sh
 npm ci
 cp .env.example .env   # add your Upstash Redis and Telegram credentials; never commit this file
 npm test
-npm run dev            # opens the dashboard at http://127.0.0.1:3000
+npm run dev            # opens the dashboard at http://127.0.0.1:3000 (Vite + React)
+REPORTS_ORIGIN=https://saudisafe.vercel.app npm run dev  # preview with live data, no credentials
 npm run sources:check  # checks the news feeds without saving anything or sending alerts
 npm run monitor        # collects news, saves it and sends eligible alerts
 ```

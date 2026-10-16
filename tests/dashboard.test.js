@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { recentReports, filterReports, healthState, sourceState } from '../public/dashboard.js';
+import { recentReports, filterReports, healthState, sourceState } from '../src/dashboard.js';
 const now = Date.parse('2026-10-14T12:00:00Z');
 const r = (id, hours, extras = {}) => ({id, title:'Saudi emergency', publisher:'BBC', publishedAt:new Date(now-hours*3600000).toISOString(), category:'Emergency', status:'Developing Report', ...extras});
 test('saved history includes seven days but excludes expired and invalid records', () => {

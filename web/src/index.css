@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --ground: #f3f1ea;
+  --surface: #ffffff;
+  --surface-2: #e9e7de;
+  --ink: #14201a;
+  --ink-2: #4d5a52;
+  --line: #dcdad0;
+  --board: #0d3b2a;
+  --board-2: #14503a;
+  --board-hover: #1a5c43;
+  --board-ink: #f3f1ea;
+  --board-ink-2: #b9cfc2;
+  --lamp: #f2c46b;
+  --lamp-ink: #1b1607;
+  --brand: #0b6e3d;
+  --ok: #156b40;
+  --ok-bg: #e0efe5;
+  --warn: #8a5300;
+  --warn-bg: #f8ebd2;
+  --bad: #ad2a1f;
+  --bad-bg: #f9e2de;
+  --board-ok: #8fe0b0;
+  --board-warn: #f2c46b;
+  --board-bad: #ffab9f;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --ground: #0e1411;
+  --surface: #161e1a;
+  --surface-2: #1f2a24;
+  --ink: #e7ece8;
+  --ink-2: #a5b2aa;
+  --line: #2a3530;
+  --board: #0a2e21;
+  --board-2: #11432f;
+  --board-hover: #165339;
+  --brand: #4cc489;
+  --ok: #6fd39f;
+  --ok-bg: #16301f;
+  --warn: #f0b75c;
+  --warn-bg: #33260f;
+  --bad: #ff9486;
+  --bad-bg: #3a1713;
+  color-scheme: dark;
+}
+
+/* Before the script applies a saved preference, follow the system theme. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --ground: #0e1411; --surface: #161e1a; --surface-2: #1f2a24; --ink: #e7ece8; --ink-2: #a5b2aa; --line: #2a3530;
+    --board: #0a2e21; --board-2: #11432f; --board-hover: #165339; --brand: #4cc489; --ok: #6fd39f; --ok-bg: #16301f; --warn: #f0b75c;
+    --warn-bg: #33260f; --bad: #ff9486; --bad-bg: #3a1713; color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", "Helvetica Neue", Arial, sans-serif;
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-line: var(--line);
+  --color-board: var(--board);
+  --color-board-2: var(--board-2);
+  --color-board-hover: var(--board-hover);
+  --color-board-ink: var(--board-ink);
+  --color-board-ink-2: var(--board-ink-2);
+  --color-lamp: var(--lamp);
+  --color-lamp-ink: var(--lamp-ink);
+  --color-brand: var(--brand);
+  --color-ok: var(--ok);
+  --color-ok-bg: var(--ok-bg);
+  --color-warn: var(--warn);
+  --color-warn-bg: var(--warn-bg);
+  --color-bad: var(--bad);
+  --color-bad-bg: var(--bad-bg);
+  --color-board-ok: var(--board-ok);
+  --color-board-warn: var(--board-warn);
+  --color-board-bad: var(--board-bad);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; -webkit-text-size-adjust: 100%; }
+  body { background: var(--ground); color: var(--ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+  ::selection { background: var(--brand); color: var(--surface); }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; border-radius: 4px; }
+  input { caret-color: var(--brand); }
+  html { scrollbar-color: var(--line) var(--ground); }
+  .tabular { font-variant-numeric: tabular-nums; }
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+@keyframes lamp { from { background-color: var(--board-2); color: var(--board-ink); } }
+.row-in { animation: rise 260ms cubic-bezier(.16, 1, .3, 1) both; }
+.lamp-on { animation: lamp 320ms cubic-bezier(.16, 1, .3, 1); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .row-in, .lamp-on { animation: none; }
+  *, *::before, *::after { transition-duration: 1ms !important; }
+}

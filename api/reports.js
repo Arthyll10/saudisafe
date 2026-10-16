@@ -1,5 +1,5 @@
 import { Store } from '../src/store.js';
-import { recentReports } from '../public/dashboard.js';
+import { recentReports } from '../src/dashboard.js';
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
   res.setHeader('X-Content-Type-Options', 'nosniff');

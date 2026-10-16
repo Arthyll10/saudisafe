@@ -1,0 +1,71 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-16T16:40:45.346Z",
+        "reason": "agent decided: throwaway decision-round sketch (gitignored fixture, never shipped)"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-16T16:40:45.355Z",
+        "reason": "agent decided: throwaway decision-round sketch (gitignored fixture, never shipped)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-16T16:40:45.363Z",
+        "reason": "agent decided: throwaway decision-round sketch (gitignored fixture, never shipped)"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-10-16T16:40:45.371Z",
+        "reason": "agent decided: throwaway decision-round sketch (gitignored fixture, never shipped)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-16T16:40:45.380Z",
+        "reason": "agent decided: throwaway decision-round sketch (gitignored fixture, never shipped)"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-10-16T16:40:45.389Z",
+        "reason": "agent decided: throwaway decision-round sketch (gitignored fixture, never shipped)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-16T16:40:45.397Z",
+        "reason": "agent decided: throwaway decision-round sketch; bone ground is the chosen direction's palette"
+      }
+    ]
+  }
+}

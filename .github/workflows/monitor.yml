@@ -19,7 +19,8 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-      - run: npm ci --ignore-scripts
+      # The website toolchain is a dev dependency; the monitor only needs runtime packages.
+      - run: npm ci --ignore-scripts --omit=dev
       - run: npm run monitor
         env:
           UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
